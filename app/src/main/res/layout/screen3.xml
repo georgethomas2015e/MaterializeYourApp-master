@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp"
+    android:padding="1dip"
+    android:id="@+id/framelyotid">
+
+    <ImageView
+        android:id="@+id/imgbiew"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher"
+        android:scaleType="centerCrop" />
+
+</FrameLayout>
+
+
