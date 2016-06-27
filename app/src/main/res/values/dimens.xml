@@ -24,4 +24,13 @@
     <dimen name="elevation_low">9dp</dimen>
     <dimen name="elevation_high">12dp</dimen>
     <dimen name="status_bar_height">25dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="LogoWidth">150dp</dimen>
+    <dimen name="LogoMargin">15dp</dimen>
+    <dimen name="EditTextWidth">38dp</dimen>
+    <dimen name="font_login_text_size">16dp</dimen>
+    <dimen name="MarginLeft">10dp</dimen>
+    <dimen name="MarginTermsLeft">6dp</dimen>
+    <dimen name="SignUpCheckBoxHeight">22dp</dimen>
 </resources>
