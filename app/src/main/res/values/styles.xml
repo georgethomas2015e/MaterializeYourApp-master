@@ -48,4 +48,12 @@
     <color name="accent">#FFEB3B</color>
     <color name="accent_translucent">#80FFEB3B</color>
     <color name="accent_bright">#FFF493</color>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#919CDB</item>
+        <item name="colorControlActivated">@color/darkBlue</item>
+    </style>
+
+
+
 </resources>
