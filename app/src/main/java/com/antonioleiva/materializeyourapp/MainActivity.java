@@ -32,6 +32,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
+
 public class MainActivity extends AppCompatActivity implements RecyclerViewAdapter.OnItemClickListener {
 
     public static final String AVATAR_URL = "http://lorempixel.com/200/200/people/1/";
@@ -77,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
        // myRecyclerViewAdapter.setOnItemClickListener(this);
         myRecyclerView.setAdapter(myRecyclerViewAdapter);
         myRecyclerView.setLayoutManager(linearLayoutManager);
+
+
 
         //prepareGallery();
        /* if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
