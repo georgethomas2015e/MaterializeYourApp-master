@@ -10,6 +10,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -134,4 +148,61 @@ public class LoginActivity extends AppCompatActivity {
 
         return valid;
     }
+
+    private void sendRequest() {
+        progressDialog = new SpotsDialog(Messages_Activity.this, R.style.Custom);
+        progressDialog.show();
+        String url = "http://proman.oliveglobal.com/projects/" + projectid + "/posts.json";
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        progressDialog.dismiss();
+
+                        ParsingJSon pj = new ParsingJSon(response);
+                        pj.parseJSON(response);
+                        adapter = new Messages_adapter(Messages_Activity.this,
+                                R.layout.submsglist_item, GlobalData.messagelist);
+                        if(GlobalData.messagelist.isEmpty()){
+
+                            Util.showMessageDialog(Messages_Activity.this, "NO Messages!!");
+
+                        }else {
+                            recyclerView.setAdapter(adapter);
+                        }
+                       /* adapter = new Messages_adapter(adapter.data3);
+                        recyclerView.setAdapter(adapter);*/
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                        progressDialog.dismiss();
+                    }
+                })
+
+        {
+
+            /**
+             * Passing some request headers
+             * */
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                String APIKey = GlobalData.loginkey;
+                String userpassword = APIKey + ":" + "";
+                String encodedAuthorization = Base64Coder.encodeString(userpassword);
+                headers.put("Authorization", "Basic " + encodedAuthorization);
+                return headers;
+            }
+
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(jsonObjReq);
+    }
+
+
+
 }
