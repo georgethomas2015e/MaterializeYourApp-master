@@ -1,7 +1,5 @@
 package com.antonioleiva.materializeyourapp;
 
-import com.materialdesign.model.Repliesmodel;
-import com.materialdesign.myapplicationmaterial.MyApplication;
 
 import org.json.JSONArray;
 import org.json.JSONException;
