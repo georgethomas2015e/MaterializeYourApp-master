@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/tool_bar1"
+        layout="@layout/tool_barlogtime">
+    </include>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Project Name"
+    android:textColor="@color/ColorPrimary"
+    android:textStyle="bold"
+    android:padding="4dp"
+    android:id="@+id/project_nameId"
+    android:layout_gravity="center_horizontal" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/ColorPrimary"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messageslist_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>
