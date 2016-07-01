@@ -24,4 +24,31 @@
     <string name="downloaded">Downloaded</string>
     <string name="more">More</string>
     <string name="settings">Settings</string>
+
+    <array name="testing">
+        <item>Select Username</item>
+        <item>Shyam</item>
+        <item>kishore</item>
+        <item>mukesh</item>
+        <item>Ram</item>
+        <item>Ram</item>
+        <item>Ram</item>
+    </array>
+    <array name="year">
+        <item>Select Year</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+
+    </array>
+    <array name="type">
+        <item>Select Type</item>
+        <item>All</item>
+        <item>Unique</item>
+
+
+    </array>
+
+
+
 </resources>
