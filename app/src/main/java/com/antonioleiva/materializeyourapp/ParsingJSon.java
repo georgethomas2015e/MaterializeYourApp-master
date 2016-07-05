@@ -1,3 +1,4 @@
+/*
 package com.antonioleiva.materializeyourapp;
 
 import com.materialdesign.model.Repliesmodel;
@@ -7,9 +8,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+*/
 /**
  * Created by kishan on 6/1/2016.
- */
+ *//*
+
 public class ParsingJSon {
 
 
@@ -95,4 +98,4 @@ public class ParsingJSon {
 
 
 
-}
+}*/

@@ -1,3 +1,4 @@
+/*
 package com.antonioleiva.materializeyourapp;
 
 import android.app.AlertDialog;
@@ -12,7 +13,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -20,26 +20,20 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.materialdesign.model.commonMsgData_model;
-import com.materialdesign.myapplicationmaterial.restintrection.Base64Coder;
-import com.materialdesign.myapplicationmaterial.restintrection.GlobalData;
-import com.materialdesign.myapplicationmaterial.restintrection.ParsingJSon;
-import com.materialdesign.myapplicationmaterial.restintrection.Util;
-
 import org.json.JSONObject;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.Map;
-
 import dmax.dialog.SpotsDialog;
 
 
+*/
 /**
  * Created by kishan on 6/9/2016.
- */
+ *//*
+
 public class Messages_Activity extends AppCompatActivity {
     Toolbar toolbar;
     RecyclerView recyclerView;
@@ -149,8 +143,10 @@ public class Messages_Activity extends AppCompatActivity {
                         }else {
                             recyclerView.setAdapter(adapter);
                         }
-                       /* adapter = new Messages_adapter(adapter.data3);
-                        recyclerView.setAdapter(adapter);*/
+                       */
+/* adapter = new Messages_adapter(adapter.data3);
+                        recyclerView.setAdapter(adapter);*//*
+
                     }
                 },
                 new Response.ErrorListener() {
@@ -163,9 +159,11 @@ public class Messages_Activity extends AppCompatActivity {
 
         {
 
-            /**
+            */
+/**
              * Passing some request headers
-             * */
+             * *//*
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -185,3 +183,4 @@ public class Messages_Activity extends AppCompatActivity {
 
 
 }
+*/

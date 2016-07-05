@@ -48,7 +48,13 @@
 
 
     </array>
-
+    <string name="called">Called\n and\nTalked</string>
+    <string name="callednottalk">Called but\n not \nTalked</string>
+    <string name="mailsent">Mail\nSent</string>
+    <string name="mailreceived">Mail\nReceived</string>
+    <string name="message">Message</string>
+    <string name="other">Other</string>
+    <string name="total">Total</string>
 
 
 </resources>
