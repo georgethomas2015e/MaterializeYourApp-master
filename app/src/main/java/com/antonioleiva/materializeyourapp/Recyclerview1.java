@@ -22,10 +22,52 @@ public class Recyclerview1 extends AppCompatActivity {
     RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     recyclerview1_adapter mainadapter1;
+    String year="",team_individual="",user="", type="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recyclerview1);
+
+
+        year=getIntent().getStringExtra("yeark");
+        team_individual=getIntent().getStringExtra("teamindi_rdk");
+        user=getIntent().getStringExtra("userk");
+        type=getIntent().getStringExtra("typek");
+
+
+        if(year.equals("")){
+
+        }
+        else {
+            //team_individual(add to name value pair)
+        }
+
+        if(team_individual.equals("")){
+
+        }
+        else {
+            //team_individual(add to name value pair)
+        }
+        if(user.equals("Select Username")||user.equals("")){
+
+        }
+        else {
+            //team_individual(add to name value pair)
+        }
+        if(type.equals("Select Type")||type.equals("")){
+
+        }
+        else {
+            //team_individual(add to name value pair)
+        }
+
+
+
+
+
+
+
+
 
         recyclerView = (RecyclerView) findViewById(R.id.genreport_dayslist);
         recyclerView.setHasFixedSize(true);
