@@ -11,6 +11,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
+import com.antonioleiva.materializeyourapp.R;
+import com.antonioleiva.materializeyourapp.Recyclerr;
+
 /**
  * Created by kishan on 7/7/2016.
  */
@@ -21,6 +24,7 @@ public class testingcapture extends AppCompatActivity {
     RadioButton rdbtn_team,rdbtn_individual,radioButton;
     Button submit_filterbtn;
     String year,user,type,team_or_indi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,24 +44,19 @@ public class testingcapture extends AppCompatActivity {
                 user  = user_spin.getSelectedItem().toString();
                 type  = type_spin.getSelectedItem().toString();
 
-                if (rdgrp_temindi.getCheckedRadioButtonId() == -1)
-                {
-                    int selectedId = rdgrp_temindi.getCheckedRadioButtonId();
+                int selectedId = rdgrp_temindi.getCheckedRadioButtonId();
 
-                    // find the radiobutton by returned id
-                    radioButton = (RadioButton) findViewById(selectedId);
-                    team_or_indi=radioButton.getText().toString();
-                }
-                else
-                {
-                   team_or_indi="";
-                }
+                // find the radiobutton by returned id
+                radioButton = (RadioButton) findViewById(selectedId);
+                team_or_indi=radioButton.getText().toString();
 
-                Intent inte= new Intent(testingcapture.this,Recyclerview1.class);
+
+                Intent inte= new Intent(testingcapture.this,Recyclerr.class);
                 inte.putExtra("yeark",year);
                 inte.putExtra("userk",user);
                 inte.putExtra("typek",type);
                 inte.putExtra("teamindi_rdk",team_or_indi);
+                Recyclerr.flag=false;
                 startActivity(inte);
 
 
@@ -71,20 +70,20 @@ public class testingcapture extends AppCompatActivity {
     public class generalreportDays extends AsyncTask<Void, Void, Void> {
         @Override
         protected void onPreExecute() {
-           Util.showProDialog(testingcapture.this, "Loading....");
+            Util.showProDialog(testingcapture.this, "Loading....");
             super.onPreExecute();
         }
         @Override
         protected Void doInBackground(Void... params) {
 
-           getgenreportlist_days();
+            getgenreportlist_days();
 
             return null;
         }
 
         @Override
         protected void onPostExecute(Void result) {
-           Util.dimissProDialog();
+            Util.dimissProDialog();
             user_spin.setAdapter(new ArrayAdapter<String>(testingcapture.this, android.R.layout.simple_spinner_dropdown_item, students));
 
 
